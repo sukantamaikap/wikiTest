@@ -20,5 +20,7 @@ public final  class UIConstants {
         // search result page
         public static final String SUGGESTION_ID = "mw-search-DYM-suggestion";
         public static final String SUGGESTED_TITLE_XPATH = ".//div[@class='searchdidyoumean']";
+        public static final String SEARCH_RESULT_COUNT_XPTH = ".//div[@class='results-info']/strong[2]";
+        public static final String FIRST_SEARCH_RESULT_XPATH = ".//ul[@class='mw-search-results']/li[%s]";
     }
 }

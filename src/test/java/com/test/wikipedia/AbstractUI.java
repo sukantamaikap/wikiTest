@@ -4,6 +4,7 @@ import com.test.wikipedia.drivers.DriverFactory;
 import com.test.wikipedia.pages.WikiPageFactory;
 import com.test.wikipedia.utils.ConfigUtil;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;

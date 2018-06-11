@@ -22,13 +22,10 @@ public class WikiTests extends AbstractUI {
     }
 
     @Test
-    public void testWikiHomePageTitle() {
+    public void testSearchSuggestion() {
         LOG.info("VALIDATE PAGE HEADER");
         Assert.assertEquals(this.homePage.getPageHeader(), UIConstants.PageText.HOME_PAGE_HEADER, "Page header does not match !!!");
-    }
 
-    @Test
-    public void testSearchSuggestion() {
         LOG.info("SEARCH FOR : \"furry rabbits\" ");
         this.homePage.search(UIConstants.SearchString.SEARCH_STRING_RABBIT);
 
@@ -38,5 +35,12 @@ public class WikiTests extends AbstractUI {
         LOG.info("VALIDATE THE SUGGESTION PRESENTED IS : \"fury rabbit\"");
         Assert.assertEquals(this.searchResultPage.getDidYouMeanSuggestion(), UIConstants.SearchString.SEARCH_STRING_SUGGESTION_RABIT, "Expected suggestion does not match actual!!!");
 
+        LOG.info("CLICK ON SUGGESTION");
+        this.searchResultPage.clickOnSuggestion();
+
+        LOG.info("VALIDATE TOTAL NUMBER OF RESULT");
+        Assert.assertEquals(this.searchResultPage.getSearchResultCount(), 656, "Result count does not match expected!!");
+
+        LOG.info("CLICK ON FIRST SEARCH RESULT");
     }
 }
