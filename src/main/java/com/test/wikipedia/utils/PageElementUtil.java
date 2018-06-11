@@ -17,11 +17,11 @@ public class PageElementUtil {
         this.webDriverWait = this.browserDriver.getWebDriverWait();
     }
 
-//    public WebElement findElement(final By by) {
-//        return this.webDriverWait.until(ExpectedConditions.presenceOfElementLocated(by));
-//    }
-//
-//    public List<WebElement> findElements(final By by) {
-//        return this.webDriverWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
-//    }
+    public WebElement findElement(final By by) {
+        return this.webDriverWait.until(ExpectedConditions.presenceOfElementLocated(by));
+    }
+
+    public List<WebElement> findElements(final By by) {
+        return this.webDriverWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+    }
 }
