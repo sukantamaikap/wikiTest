@@ -1,10 +1,10 @@
 # wikiTest
 Selenium framwork for https://www.wikipedia.org/. This is part of a take home test!!
 
-#Build System 
+#Build System :
 maven
 
-#Programming Language 
+#Programming Language: 
 java
 
 #Supported browsers :
@@ -12,6 +12,7 @@ Google Chrome : tested on Version 67.0.3396.79 with driver version 2.40
 Firefox :
 
 #Pre-Requisits :
+
 Firefox :
 -------
 $ chmod +x src/scripts/geckodriver-install.sh

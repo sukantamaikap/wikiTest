@@ -4,12 +4,12 @@ import com.test.wikipedia.drivers.Driver;
 import com.test.wikipedia.utils.PageElementUtil;
 import org.openqa.selenium.WebDriver;
 
-public class AbstractPage {
+public class BasePage {
     private Driver browserDriver;
     private PageElementUtil elementUtil;
     private WebDriver webDriver;
 
-    public AbstractPage(final Driver browserDriver) {
+    public BasePage(final Driver browserDriver) {
         this.browserDriver = browserDriver;
         this.elementUtil = new PageElementUtil(this.browserDriver);
         this.webDriver = this.grtDriver().getWebDriver();

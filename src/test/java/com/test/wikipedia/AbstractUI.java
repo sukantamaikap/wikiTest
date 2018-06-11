@@ -13,7 +13,7 @@ public class AbstractUI {
     private static final Logger LOG = Logger.getLogger(AbstractUI.class.getSimpleName());
 
     protected DriverFactory driverFactory;
-    protected WikiPageFactory bookingPageFactory;
+    protected WikiPageFactory wikiPageFactory;
 
     /**
      * Start browser and prepare environment
@@ -30,7 +30,7 @@ public class AbstractUI {
         this.driverFactory = DriverFactory.getInstance();
 
         LOG.info("INIT PAGE");
-        this.bookingPageFactory = new WikiPageFactory(this.driverFactory.getDriver());
+        this.wikiPageFactory = new WikiPageFactory(this.driverFactory.getDriver());
 
         this.driverFactory.getDriver().getWebDriver().navigate().to(ConfigUtil.getBaseUrl());
 
